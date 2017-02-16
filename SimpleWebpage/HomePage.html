@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Homework 1 - First Webpage</title>
+<title>Homework 2 - First Webpage refined</title>
 <style type="text/css">
 
 body {
@@ -38,9 +38,29 @@ table, td {
 	background-color: #0066cc;
 }
 
+td:first-of-type {
+	background-color: #0080ff;
+}
+
+td:nth-child(3) {
+	background-color: #0080ff;
+}
+
+a {
+	color: #FFCC00;
+}
+
+a:visited {
+	color: blue;
+}
+
 img {
 	display: block;
 	margin: auto;
+}
+
+.top {
+	vertical-align: text-top;
 }
 
 .commands {
@@ -50,6 +70,11 @@ img {
 .descript {
 	width: 400px;
 }
+
+.monospaceHeader {
+	font-family: monospace;
+}
+
 .monospace {
 	font-family: monospace;
 	font-weight: 100;
@@ -58,39 +83,27 @@ img {
 .monospace:hover {
 	font-family: monospace;
 	border: thin solid #FFCC00;
-	color: red;
+	color: white;
 	cursor: pointer;
+	animation-name: examples;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
-.buttonStyle {
-	border-radius: 4px;
-	border: thin solid #F0E020;
-	padding: 5px;
-	background-color: #F8F094;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	color: #663300;
-	width: 75px;
-}
-
-.buttonStyle:hover {
-	border: thin solid #FFCC00;
-	background-color: #FCF9D6;
-	color: #996633;
-	cursor: pointer;
-}
-
-.buttonStyle:active {
-	border: thin solid #99CC00;
-	background-color: #F5FFD2;
-	color: #669900;
-	cursor: pointer;
+@keyframes examples {
+	0% {
+		background-color: blue
+	}
+	100% {
+		background-color: #0066cc;
+	}
 }
 </style>
 </head>
 
 <body>
-	<h1><span style="color:red">cs2610 Homework 1</span></h1>
+	<h1><span style="color:red">cs2610 Homework 2</span></h1>
 	<div>
 		<h2><span style="color:lime">Useful Commands</span></h2>
 		<h2><span style="color:blue">Unix Shell</span></h2>
@@ -98,16 +111,16 @@ img {
 			<tr>
 				<th class="commands"><p>Commands</p></th>
 				<th class="descript"><p>Description</p></th>
-				<th class="descript"><p class="monospace">Examples</p></th>
+				<th class="descript"><p class="monospaceHeader">Examples</p></th>
 			</tr>
 			<tr>
-				<td><p>wget</p></td>
+				<td><p><a href="https://www.howtogeek.com/281663/how-to-use-wget-the-ultimate-command-line-downloading-tool/">wget</a></p></td>
 				<td class="descript"><p>When given a url to an image it will download
 				and place it in your current working directory.</p></td>
 				<td class="descript"><p class="monospace">wget http://donnacardillo.com/wp-content/uploads/2014/07/I-dont-know-Donna-Cardillo.jpg</p></td>
 			</tr>
 			<tr>
-				<td><p>man</p></td>
+				<td><p><a href="http://www.linfo.org/man.html">man</a></p></td>
 				<td class="descript"><p>Used as a help to describe in detail 
 				the use of other Unix commands</p></td>
 				<td class="descript"><p class="monospace">man wget</p></td>
@@ -119,7 +132,7 @@ img {
 			<tr>
 				<th class="commands"><p>Commands</p></th>
 				<th class="descript"><p>Description</p></th>
-				<th class="descript"><p class="monospace">Examples</p></th>
+				<th class="descript"><p class="monospaceHeader">Examples</p></th>
 			</tr>
 			<tr>
 				<td><p>TBD</p></td>
@@ -134,9 +147,8 @@ img {
 		</table>
 	</div>
 	<div>
-		<h2><span style="color:#FFCC00">Need Help?</span></h2>
 		<a href="http://www.w3schools.com/default.asp">
-			<img src="/I-dont-know-Donna-Cardillo.jpg" alt="Need Help?">
+			<p>Need Help?<img class="top" src="/I-dont-know-Donna-Cardillo.jpg" alt="Need Help?"></p>
 		</a>
 	</div>
 
